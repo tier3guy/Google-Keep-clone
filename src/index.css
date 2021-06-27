@@ -5,69 +5,99 @@
   padding: 0%;
 }
 
-
-#container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient(35deg , rgb(102, 102, 255) , rgb(159, 255, 164) ,green);
-  flex-direction: column;
-}
-
-.header{
-  text-align: center;
-  font-weight: bolder;
-  color: rgb(26, 1, 255);
-}
-
-.accordion{
-  height: 500px;
-  width: 400px;
-  padding: 15px 12px;
-  background-color: #f3eded8c;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  border-radius: 3px;
-}
-
-#items{
-  margin-top: 20px;
-
-  position: relative;
-  height: 90%;
-  overflow-y: scroll;
-}
-
-#items::-webkit-scrollbar {
+::-webkit-scrollbar{
   display: none;
 }
 
-#accordItem{
-  width: inherit;
-  margin-bottom: 15px;
-}
-
-#question-section{
+#navBar{
   display: flex;
-  padding: 10px 12px;
-  background: rgb(199, 199, 199);
-  border-radius: 7px 7px 0px 0px;
+  background: rgba(255, 232, 21, 0.904);
+  padding: 15px;
 }
 
-#toggle{
-  background: transparent;
-  font-size: 1.2em;
+.fas{
+  font-size: 2rem;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+.fas:hover{
+  color: rgb(255, 145, 0);
+}
+
+#notesMain{
+  padding: 10px 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#notesInput , .input{
+  padding: 15px;
+  font-size: 18px;
   border: none;
+  border-radius: 9px;
+  width: 400px;
+  outline: none;
+  transition: all 0.3s;
+  box-sizing: content-box;
 }
 
-#quest{
-  margin-left: 12px;
+#item{
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 250px;
+  overflow-y: scroll;
+  border-radius: 7px;
+  margin: 10px 0px 20px 25px;
+  box-shadow: rgba(33, 33, 61, 0.699) 0px 6px 12px -2px, rgba(0, 0, 0, 0.568) 0px 3px 7px -3px;
 }
 
-#answ{
-  padding: 6px;
-  background-color: rgba(82, 243, 122, 0.575);
-  font-size: 0.8rem;
-  border-radius: 0px 0px 7px 7px ;
+#item::-webkit-scrollbar , #notesItemConatiner::-webkit-scrollbar{
+  display: none;
+}
+
+#notesItemConatiner{
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+#item h4{
+  color: blue;
+  margin-top: 12px;
+}
+
+.fa-trash-alt{
+  font-size: 1.5rem;
+}
+.fa-trash-alt:hover{
+  color: red;
+}
+
+#del{
+  display: flex;
+}
+
+#mainConatiner{
+  box-shadow: rgba(0, 0, 0, 0.404) 0px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  z-index:100 ;
+  position: fixed;
+  background: #ffffff;
+}
+
+
+#addbtn{
+  display: inline-block;
+  bottom: 0%;
+  margin-top: 20px;
+  background: rgba(255, 251, 0, 0.815);
+  border: none;
+  padding: 15px;
+  font-weight: bolder;
 }
