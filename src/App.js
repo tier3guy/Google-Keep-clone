@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import questions from './api';
+import AccordionItem from './AccordianItem';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <div id = 'container'>
+                <div className = 'accordion'>
+                    <h2 className = 'header'>React Interview Questions</h2>
+                    <div id = 'items'>
+                        {
+                            questions.map((currElement) => {
+                                return <AccordionItem 
+                                        quest = {currElement.quest}
+                                        key = {currElement.id}
+                                        ans = {currElement.ans}
+                                />
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default App;
